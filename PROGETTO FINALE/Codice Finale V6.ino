@@ -19,7 +19,7 @@ void setup() {
  
 void loop() {
 
-  float gradi = 512; //Creo una variabile per rimappare i gradi a 90
+  float gradi = 90; //Creo una variabile per rimappare i gradi a 90
   gradi = map(gradi, 0, 360, 0, 2048); //Li rimappo
   
   luminositaSX = analogRead(fotosensoreSX); //Lettura della luminosità della fotoresistenza di sinistra
@@ -45,18 +45,20 @@ void loop() {
 void Sinistra()
 {
   //Rimetto i gradi anche nella funzione
-  float gradi = 512;
+  float gradi = 90;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso sinistra di 90 gradi
   motorino.step(-gradi);
+  delay(500);
 }
 
 
 void Destra()
 {
   //Rimetto i gradi anche nella funzione
-  float gradi = 512;
+  float gradi = 90;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso destra di 90 gradi
   motorino.step(gradi);
+  delay(500);
 }
