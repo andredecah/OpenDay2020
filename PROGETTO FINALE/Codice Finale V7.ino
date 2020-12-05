@@ -49,7 +49,6 @@ void Sinistra()
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso sinistra di 90 gradi
   motorino.step(-gradi);
-  delay(500);
 }
 
 
@@ -60,5 +59,4 @@ void Destra()
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso destra di 90 gradi
   motorino.step(gradi);
-  delay(500);
 }
