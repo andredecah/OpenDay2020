@@ -23,7 +23,7 @@ void loop() {
   gradi = map(gradi, 0, 360, 0, 2048); //Li rimappo
   
   luminositaSX = analogRead(fotosensoreSX); //Lettura della luminosità della fotoresistenza di sinistra
-  lumonisitaDX = analogRead(fotosensoreDX); //Lettura della luminosità della fotoresistenza di destra
+  luminositaDX = analogRead(fotosensoreDX); //Lettura della luminosità della fotoresistenza di destra
 
   //Se il fotosensore di sinistra rileva più luce di quella di destra
   if (luminositaSX > luminositaDX) 
