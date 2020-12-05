@@ -48,7 +48,7 @@ void Sinistra()
   float gradi = 90;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso sinistra di 90 gradi
-  myStepper.step(-gradi);
+  motorino.step(-gradi);
 }
 
 
@@ -58,5 +58,5 @@ void Destra()
   float gradi = 90;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso destra di 90 gradi
-  myStepper.step(gradi);
+  motorino.step(gradi);
 }
