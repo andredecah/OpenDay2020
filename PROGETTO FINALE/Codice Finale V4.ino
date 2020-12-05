@@ -11,7 +11,7 @@ int luminositaDX; //Il valore letto dalla fotoresistenza destra
 void setup() {
   
   Serial.begin(9600);
-  motorino.setSpeed(100); //Velocità usata dal motorino
+  motorino.setSpeed(10); //Velocità usata dal motorino
   pinMode(fotosensoreSX, INPUT); //La fotoresistenza legge
   pinMode(fotosensoreDX, INPUT); //La fotoresistenza legge
   
@@ -19,7 +19,7 @@ void setup() {
  
 void loop() {
 
-  float gradi = 90; //Creo una variabile per rimappare i gradi da 2048 ai 360
+  float gradi = 512; //Creo una variabile per rimappare i gradi a 90
   gradi = map(gradi, 0, 360, 0, 2048); //Li rimappo
   
   luminositaSX = analogRead(fotosensoreSX); //Lettura della luminosità della fotoresistenza di sinistra
@@ -45,7 +45,7 @@ void loop() {
 void Sinistra()
 {
   //Rimetto i gradi anche nella funzione
-  float gradi = 90;
+  float gradi = 512;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso sinistra di 90 gradi
   motorino.step(-gradi);
@@ -56,7 +56,7 @@ void Sinistra()
 void Destra()
 {
   //Rimetto i gradi anche nella funzione
-  float gradi = 90;
+  float gradi = 512;
   gradi = map(gradi, 0, 360, 0, 2048);
   //Giro verso destra di 90 gradi
   motorino.step(gradi);
